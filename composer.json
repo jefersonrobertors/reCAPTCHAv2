@@ -1,0 +1,11 @@
+{
+    "name": "jefer/re-captch-av2",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
