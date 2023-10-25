@@ -27,7 +27,8 @@ final class LoginController extends Controller {
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
             curl_setopt($ch, CURLOPT_POSTFIELDS, [
                 'secret' => $_ENV['G_RECAPTCHA_SECRET_KEY'],
-                'response' => $_POST['g-recaptcha-response'] ?? ''
+                'response' => $_POST['g-recaptcha-response'] ?? '',
+                'remoteip' => $_SERVER['REMOTE_ADDR']
             ]);
 
             $result = curl_exec($ch);
